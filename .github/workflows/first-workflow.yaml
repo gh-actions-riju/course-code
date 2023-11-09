@@ -1,0 +1,13 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latesr
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: Multiline commands
+        run: |
+          node -v
+          npm -v
