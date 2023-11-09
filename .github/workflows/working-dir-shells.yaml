@@ -17,7 +17,7 @@ jobs:
       - name: pwd
         run: |
           pwd
-          ls -lart
+          ls -art
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
