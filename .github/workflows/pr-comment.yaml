@@ -5,7 +5,7 @@ on:
 
 jobs:
   pr-comment:
-    runs-on: ubintu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Comment on new PRs
         uses: actions/github-script@v6
