@@ -1,5 +1,5 @@
 name: Environment Variables
-on:[push]
+on: [push]
 
 jobs:
   env-vars-and-context:
