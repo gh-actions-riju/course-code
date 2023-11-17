@@ -26,5 +26,5 @@ jobs:
     needs: job1
     if: failure()
     steps:
-      run: echo 'Job 2'
+      - run: echo 'Job 2'
     
