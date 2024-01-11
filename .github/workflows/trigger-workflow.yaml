@@ -1,0 +1,26 @@
+name: Trigger Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      HELM_RELEASE:
+        description: 'Description for parameter 1'
+        required: true
+        default: 'cicd-test-capability'
+      AWS_ENVIRONMENT:
+        description: 'Description for parameter 2'
+        required: false
+        default: 'prod'
+
+jobs:
+  trigger_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Another Workflow
+        uses: actions/workflow-dispatch@v2
+        with:
+          workflow: Another-Workflow.yml
+          inputs: |
+            CAPABILITY_NAME: ${{ inputs.HELM_RELEASE }}
+            ENVIRONMENT: ${{ inputs.AWS_ENVIRONMENT }}
