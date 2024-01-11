@@ -1,8 +1,7 @@
 name: Triggered Workflow
 
 on:
-  workflow_run:
-    workflows: ["Source Workflow"]
+  workflow_call:
     
 jobs:
   process_inputs:
