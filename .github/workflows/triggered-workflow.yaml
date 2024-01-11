@@ -13,5 +13,5 @@ jobs:
 
       - name: Display Inputs
         run: |
-          echo "Input CAPABILITY_NAME is: ${{ github.event.inputs.CAPABILITY_NAME }}"
-          echo "Input ENVIRONMENT is: ${{ github.event.inputs.ENVIRONMENT }}"
+          echo "Input CAPABILITY_NAME is: ${{ env.CAPABILITY_NAME }}"
+          echo "Input ENVIRONMENT is: ${{ env.ENVIRONMENT }}"
