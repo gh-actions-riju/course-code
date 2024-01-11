@@ -15,7 +15,7 @@ on:
 jobs:
   trigger_workflow:
     if: ${{ inputs.AWS_ENVIRONMENT == 'prod' || inputs.AWS_ENVIRONMENT == 'production'}}
-    uses: gh-actions-riju/course-code/.github/workflows/triggered-workflow.yaml@main
+    uses: gh-actions-riju/course-code/.github/workflows/called-workflow.yaml@main
     with:
      CAPABILITY_NAME: ${{ inputs.HELM_RELEASE }}
      AWS_ENVIRONMENT: ${{ inputs.AWS_ENVIRONMENT }}
