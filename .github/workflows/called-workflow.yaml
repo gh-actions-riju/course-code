@@ -20,5 +20,5 @@ jobs:
 
       - name: Display Inputs
         run: |
-          echo "Input CAPABILITY_NAME is: ${{ input.CAPABILITY_NAME }}"
-          echo "Input ENVIRONMENT is: ${{ input.AWS_ENVIRONMENT }}"
+          echo "Input CAPABILITY_NAME is: ${{ inputs.CAPABILITY_NAME }}"
+          echo "Input ENVIRONMENT is: ${{ inputs.AWS_ENVIRONMENT }}"
