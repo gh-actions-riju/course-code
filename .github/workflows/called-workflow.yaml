@@ -2,7 +2,14 @@ name: Triggered Workflow
 
 on:
   workflow_call:
-    
+    inputs:
+      CAPABILITY_NAME:
+        required: true
+        type: string
+      AWS_ENVIRONMENT:
+        required: true
+        type: string
+        default: prod
 jobs:
   process_inputs:
     runs-on: ubuntu-latest
@@ -13,5 +20,5 @@ jobs:
 
       - name: Display Inputs
         run: |
-          echo "Input CAPABILITY_NAME is: ${{ input.HELM_RELEASE }}"
-          echo "Input ENVIRONMENT is: ${{ env.AWS_ENVIRONMENT }}"
+          echo "Input CAPABILITY_NAME is: ${{ input.CAPABILITY_NAME }}"
+          echo "Input ENVIRONMENT is: ${{ input.AWS_ENVIRONMENT }}"
